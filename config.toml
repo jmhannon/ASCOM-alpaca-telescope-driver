@@ -1,0 +1,25 @@
+title = "Alpaca Driver (Rigel Telescope)"
+
+[network]
+ip_address = ''       # Any address
+port = 55556
+pipe_in_path = '/usr/comm/Tel.in'
+pipe_out_path = '/usr/comm/Tel.out'
+
+[server]
+location = 'Anywhere on Earth'  # Anything you want here
+verbose_driver_exceptions = true
+
+[telescope]
+SiteElevation = 256.0
+SiteLatitude = 41.889549
+SiteLongitude = -91.500431
+ApertureArea = 0.107
+ApertureDiameter = 0.370
+FocalLength = 5.18
+
+[logging]
+log_level = 'INFO'
+log_to_stdout = false
+max_size_mb = 5
+num_keep_logs = 5
