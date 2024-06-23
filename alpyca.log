@@ -1,0 +1,706 @@
+2024-01-13T14:50:21.472 INFO ==STARTUP== Serving on :5555. Time stamps are UTC.
+2024-01-13T14:50:46.883 INFO 192.168.1.156 -> GET /api/v1/telescope/0/interfaceversion?ClientID=1&ClientTransactionID=1
+2024-01-13T14:50:46.883 INFO 192.168.1.156 <- 1
+2024-01-13T14:50:46.936 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/connected
+2024-01-13T14:50:46.937 INFO 192.168.1.156 -> {'Connected': 'True', 'ClientID': '1', 'ClientTransactionID': '2'}
+2024-01-13T14:50:46.966 INFO 192.168.1.156 -> GET /api/v1/telescope/0/connected?ClientID=1&ClientTransactionID=3
+2024-01-13T14:50:46.968 INFO 192.168.1.156 <- True
+2024-01-13T14:50:46.983 INFO 192.168.1.156 -> GET /api/v1/telescope/0/connected?ClientID=1&ClientTransactionID=4
+2024-01-13T14:50:46.985 ERROR An uncaught IndexError exception occurred:
+2024-01-13T14:50:46.985 ERROR list index out of range
+2024-01-13T14:50:46.986 ERROR '  File "falcon/app.py", line 365, in falcon.app.App.__call__\n'
+2024-01-13T14:50:46.986 ERROR '  File "/home/jmhannon/.local/lib/python3.8/site-packages/falcon/hooks.py", line 264, in do_before\n    responder(self, req, resp, **kwargs)\n'
+2024-01-13T14:50:46.987 ERROR '  File "/home/jmhannon/ascomtelescope/telescope.py", line 104, in on_get\n    if (reply[0]== \'0\'):\n'
+2024-01-13T14:50:47.015 INFO 192.168.1.156 -> GET /api/v1/telescope/0/description?ClientID=1&ClientTransactionID=5
+2024-01-13T14:50:47.015 INFO 192.168.1.156 <- Rigel  ASCOM Telescope
+2024-01-13T14:50:47.022 INFO 192.168.1.156 -> GET /api/v1/telescope/0/driverinfo?ClientID=1&ClientTransactionID=6
+2024-01-13T14:50:47.022 INFO 192.168.1.156 <- Cedar Amateur Astronomers Rigel robotic telescope
+2024-01-13T14:50:47.038 INFO 192.168.1.156 -> GET /api/v1/telescope/0/name?ClientID=1&ClientTransactionID=7
+2024-01-13T14:50:47.038 INFO 192.168.1.156 <- Rigel Telescope
+2024-01-13T14:50:47.043 INFO 192.168.1.156 -> GET /api/v1/telescope/0/supportedactions?ClientID=1&ClientTransactionID=8
+2024-01-13T14:50:47.044 INFO 192.168.1.156 <- []
+2024-01-13T14:50:47.057 INFO 192.168.1.156 -> GET /api/v1/telescope/0/canfindhome?ClientID=1&ClientTransactionID=9
+2024-01-13T14:50:47.057 INFO 192.168.1.156 <- True
+2024-01-13T14:50:47.062 INFO 192.168.1.156 -> GET /api/v1/telescope/0/canpark?ClientID=1&ClientTransactionID=10
+2024-01-13T14:50:47.062 INFO 192.168.1.156 <- True
+2024-01-13T14:50:47.067 INFO 192.168.1.156 -> GET /api/v1/telescope/0/canpulseguide?ClientID=1&ClientTransactionID=11
+2024-01-13T14:50:47.067 INFO 192.168.1.156 <- False
+2024-01-13T14:50:47.075 INFO 192.168.1.156 -> GET /api/v1/telescope/0/cansetpark?ClientID=1&ClientTransactionID=12
+2024-01-13T14:50:47.075 INFO 192.168.1.156 <- False
+2024-01-13T14:50:47.112 INFO 192.168.1.156 -> GET /api/v1/telescope/0/alignmentmode?ClientID=1&ClientTransactionID=13
+2024-01-13T14:50:47.113 INFO 192.168.1.156 <- 1
+2024-01-13T14:50:47.142 INFO 192.168.1.156 -> GET /api/v1/telescope/0/cansettracking?ClientID=1&ClientTransactionID=14
+2024-01-13T14:50:47.143 INFO 192.168.1.156 <- False
+2024-01-13T14:50:47.148 INFO 192.168.1.156 -> GET /api/v1/telescope/0/canslew?ClientID=1&ClientTransactionID=15
+2024-01-13T14:50:47.148 INFO 192.168.1.156 <- False
+2024-01-13T14:50:47.158 INFO 192.168.1.156 -> GET /api/v1/telescope/0/canslewasync?ClientID=1&ClientTransactionID=16
+2024-01-13T14:50:47.158 INFO 192.168.1.156 <- True
+2024-01-13T14:50:47.168 INFO 192.168.1.156 -> GET /api/v1/telescope/0/cansync?ClientID=1&ClientTransactionID=17
+2024-01-13T14:50:47.168 INFO 192.168.1.156 <- False
+2024-01-13T14:50:47.174 INFO 192.168.1.156 -> GET /api/v1/telescope/0/canunpark?ClientID=1&ClientTransactionID=18
+2024-01-13T14:50:47.174 INFO 192.168.1.156 <- False
+2024-01-13T14:50:47.205 INFO 192.168.1.156 -> GET /api/v1/telescope/0/utcdate?ClientID=1&ClientTransactionID=19
+2024-01-13T14:50:47.205 INFO 192.168.1.156 <- 2024-01-13T14:50:47.205534Z
+2024-01-13T14:50:47.214 INFO 192.168.1.156 -> GET /api/v1/telescope/0/utcdate?ClientID=1&ClientTransactionID=20
+2024-01-13T14:50:47.214 INFO 192.168.1.156 <- 2024-01-13T14:50:47.214336Z
+2024-01-13T14:50:47.217 INFO 192.168.1.156 -> GET /api/v1/telescope/0/utcdate?ClientID=1&ClientTransactionID=21
+2024-01-13T14:50:47.217 INFO 192.168.1.156 <- 2024-01-13T14:50:47.217500Z
+2024-01-13T14:50:47.256 INFO 192.168.1.156 -> GET /api/v1/telescope/0/targetdeclination?ClientID=1&ClientTransactionID=22
+2024-01-13T14:50:47.256 ERROR ValueNotSetException: Declination not set.
+2024-01-13T14:50:47.261 INFO 192.168.1.156 -> GET /api/v1/telescope/0/targetrightascension?ClientID=1&ClientTransactionID=23
+2024-01-13T14:50:47.261 ERROR ValueNotSetException: RA not set.
+2024-01-13T14:50:47.264 INFO 192.168.1.156 -> GET /api/v1/telescope/0/alignmentmode?ClientID=1&ClientTransactionID=24
+2024-01-13T14:50:47.265 INFO 192.168.1.156 <- 1
+2024-01-13T14:50:47.268 INFO 192.168.1.156 -> GET /api/v1/telescope/0/altitude?ClientID=1&ClientTransactionID=25
+2024-01-13T14:50:47.270 INFO 192.168.1.156 <- 86.01773733
+2024-01-13T14:50:47.276 INFO 192.168.1.156 -> GET /api/v1/telescope/0/aperturearea?ClientID=1&ClientTransactionID=26
+2024-01-13T14:50:47.276 INFO 192.168.1.156 <- 0.107
+2024-01-13T14:50:47.280 INFO 192.168.1.156 -> GET /api/v1/telescope/0/aperturediameter?ClientID=1&ClientTransactionID=27
+2024-01-13T14:50:47.281 INFO 192.168.1.156 <- 0.37
+2024-01-13T14:50:47.286 INFO 192.168.1.156 -> GET /api/v1/telescope/0/azimuth?ClientID=1&ClientTransactionID=28
+2024-01-13T14:50:47.287 INFO 192.168.1.156 <- 0.75136134
+2024-01-13T14:50:47.292 INFO 192.168.1.156 -> GET /api/v1/telescope/0/declination?ClientID=1&ClientTransactionID=29
+2024-01-13T14:50:47.293 INFO 192.168.1.156 <- 45.93710381
+2024-01-13T14:50:47.297 INFO 192.168.1.156 -> GET /api/v1/telescope/0/declinationrate?ClientID=1&ClientTransactionID=30
+2024-01-13T14:50:47.297 INFO 192.168.1.156 <- 0
+2024-01-13T14:50:47.303 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/declinationrate
+2024-01-13T14:50:47.303 INFO 192.168.1.156 -> {'DeclinationRate': '0', 'ClientID': '1', 'ClientTransactionID': '31'}
+2024-01-13T14:50:47.303 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:47.327 INFO 192.168.1.156 -> GET /api/v1/telescope/0/focallength?ClientID=1&ClientTransactionID=32
+2024-01-13T14:50:47.327 INFO 192.168.1.156 <- 5.18
+2024-01-13T14:50:47.333 INFO 192.168.1.156 -> GET /api/v1/telescope/0/rightascension?ClientID=1&ClientTransactionID=33
+2024-01-13T14:50:47.334 INFO 192.168.1.156 <- 16.24546023
+2024-01-13T14:50:47.339 INFO 192.168.1.156 -> GET /api/v1/telescope/0/rightascensionrate?ClientID=1&ClientTransactionID=34
+2024-01-13T14:50:47.339 INFO 192.168.1.156 <- 0
+2024-01-13T14:50:47.343 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/rightascensionrate
+2024-01-13T14:50:47.343 INFO 192.168.1.156 -> {'RightAscensionRate': '0', 'ClientID': '1', 'ClientTransactionID': '35'}
+2024-01-13T14:50:47.343 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:47.351 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siteelevation?ClientID=1&ClientTransactionID=36
+2024-01-13T14:50:47.351 INFO 192.168.1.156 <- 256.0
+2024-01-13T14:50:47.355 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/siteelevation
+2024-01-13T14:50:47.355 INFO 192.168.1.156 -> {'SiteElevation': '-301', 'ClientID': '1', 'ClientTransactionID': '37'}
+2024-01-13T14:50:47.355 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:47.364 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/siteelevation
+2024-01-13T14:50:47.365 INFO 192.168.1.156 -> {'SiteElevation': '10001', 'ClientID': '1', 'ClientTransactionID': '38'}
+2024-01-13T14:50:47.365 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:47.372 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/siteelevation
+2024-01-13T14:50:47.372 INFO 192.168.1.156 -> {'SiteElevation': '256', 'ClientID': '1', 'ClientTransactionID': '39'}
+2024-01-13T14:50:47.372 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:47.381 INFO 192.168.1.156 -> GET /api/v1/telescope/0/sitelatitude?ClientID=1&ClientTransactionID=40
+2024-01-13T14:50:47.382 INFO 192.168.1.156 <- 41.889549
+2024-01-13T14:50:47.385 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/sitelatitude
+2024-01-13T14:50:47.385 INFO 192.168.1.156 -> {'SiteLatitude': '-91', 'ClientID': '1', 'ClientTransactionID': '41'}
+2024-01-13T14:50:47.385 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:47.392 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/sitelatitude
+2024-01-13T14:50:47.393 INFO 192.168.1.156 -> {'SiteLatitude': '91', 'ClientID': '1', 'ClientTransactionID': '42'}
+2024-01-13T14:50:47.393 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:47.400 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/sitelatitude
+2024-01-13T14:50:47.400 INFO 192.168.1.156 -> {'SiteLatitude': '41.889549', 'ClientID': '1', 'ClientTransactionID': '43'}
+2024-01-13T14:50:47.400 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:47.406 INFO 192.168.1.156 -> GET /api/v1/telescope/0/sitelongitude?ClientID=1&ClientTransactionID=44
+2024-01-13T14:50:47.406 INFO 192.168.1.156 <- -91.500431
+2024-01-13T14:50:47.411 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/sitelongitude
+2024-01-13T14:50:47.412 INFO 192.168.1.156 -> {'SiteLongitude': '-181', 'ClientID': '1', 'ClientTransactionID': '45'}
+2024-01-13T14:50:47.412 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:47.419 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/sitelongitude
+2024-01-13T14:50:47.419 INFO 192.168.1.156 -> {'SiteLongitude': '181', 'ClientID': '1', 'ClientTransactionID': '46'}
+2024-01-13T14:50:47.419 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:47.426 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/sitelongitude
+2024-01-13T14:50:47.426 INFO 192.168.1.156 -> {'SiteLongitude': '-91.500431', 'ClientID': '1', 'ClientTransactionID': '47'}
+2024-01-13T14:50:47.426 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:47.434 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=48
+2024-01-13T14:50:47.435 INFO 192.168.1.156 <- False
+2024-01-13T14:50:47.439 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewsettletime?ClientID=1&ClientTransactionID=49
+2024-01-13T14:50:47.439 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:47.467 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewsettletime
+2024-01-13T14:50:47.467 INFO 192.168.1.156 -> {'SlewSettleTime': '-1', 'ClientID': '1', 'ClientTransactionID': '50'}
+2024-01-13T14:50:47.467 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:47.477 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewsettletime
+2024-01-13T14:50:47.477 INFO 192.168.1.156 -> {'SlewSettleTime': '0', 'ClientID': '1', 'ClientTransactionID': '51'}
+2024-01-13T14:50:47.477 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:47.484 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=52
+2024-01-13T14:50:47.485 INFO 192.168.1.156 <- 16.252501696766828
+2024-01-13T14:50:47.492 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=53
+2024-01-13T14:50:47.494 INFO 192.168.1.156 <- False
+2024-01-13T14:50:47.497 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/tracking
+2024-01-13T14:50:47.497 INFO 192.168.1.156 -> {'Tracking': 'True', 'ClientID': '1', 'ClientTransactionID': '54'}
+2024-01-13T14:50:47.498 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:47.504 INFO 192.168.1.156 -> GET /api/v1/telescope/0/utcdate?ClientID=1&ClientTransactionID=55
+2024-01-13T14:50:47.504 INFO 192.168.1.156 <- 2024-01-13T14:50:47.504758Z
+2024-01-13T14:50:47.508 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/utcdate
+2024-01-13T14:50:47.508 INFO 192.168.1.156 -> {'UTCDate': '2024-01-13T15:50:47.5047580Z', 'ClientID': '1', 'ClientTransactionID': '56'}
+2024-01-13T14:50:47.508 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:47.531 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/abortslew
+2024-01-13T14:50:47.531 INFO 192.168.1.156 -> {'ClientID': '1', 'ClientTransactionID': '57'}
+2024-01-13T14:50:47.536 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=58
+2024-01-13T14:50:47.538 INFO 192.168.1.156 <- 16.252516141900102
+2024-01-13T14:50:47.542 INFO 192.168.1.156 -> GET /api/v1/telescope/0/sitelatitude?ClientID=1&ClientTransactionID=59
+2024-01-13T14:50:47.543 INFO 192.168.1.156 <- 41.889549
+2024-01-13T14:50:47.547 INFO 192.168.1.156 -> GET /api/v1/telescope/0/sitelongitude?ClientID=1&ClientTransactionID=60
+2024-01-13T14:50:47.547 INFO 192.168.1.156 <- -91.500431
+2024-01-13T14:50:47.551 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siteelevation?ClientID=1&ClientTransactionID=61
+2024-01-13T14:50:47.552 INFO 192.168.1.156 <- 256.0
+2024-01-13T14:50:47.635 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtocoordinatesasync
+2024-01-13T14:50:47.635 INFO 192.168.1.156 -> {'RightAscension': '19.252516141900102', 'Declination': '55', 'ClientID': '1', 'ClientTransactionID': '62'}
+2024-01-13T14:50:49.145 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=63
+2024-01-13T14:50:49.147 INFO 192.168.1.156 <- False
+2024-01-13T14:50:49.151 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/abortslew
+2024-01-13T14:50:49.151 INFO 192.168.1.156 -> {'ClientID': '1', 'ClientTransactionID': '64'}
+2024-01-13T14:50:50.672 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=65
+2024-01-13T14:50:50.673 INFO 192.168.1.156 <- False
+2024-01-13T14:50:50.690 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/findhome
+2024-01-13T14:50:50.690 INFO 192.168.1.156 -> {'ClientID': '1', 'ClientTransactionID': '66'}
+2024-01-13T14:50:50.697 INFO 192.168.1.156 -> GET /api/v1/telescope/0/athome?ClientID=1&ClientTransactionID=67
+2024-01-13T14:50:50.697 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:50.721 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/pulseguide
+2024-01-13T14:50:50.721 INFO 192.168.1.156 -> {'Direction': '2', 'Duration': '0', 'ClientID': '1', 'ClientTransactionID': '68'}
+2024-01-13T14:50:50.721 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:50.735 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=69
+2024-01-13T14:50:50.737 INFO 192.168.1.156 <- False
+2024-01-13T14:50:50.739 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=70
+2024-01-13T14:50:50.741 INFO 192.168.1.156 <- 16.253408490633134
+2024-01-13T14:50:50.745 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtocoordinates
+2024-01-13T14:50:50.745 INFO 192.168.1.156 -> {'RightAscension': '15.253408490633134', 'Declination': '1', 'ClientID': '1', 'ClientTransactionID': '71'}
+2024-01-13T14:50:50.745 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:50.751 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=72
+2024-01-13T14:50:50.752 INFO 192.168.1.156 <- False
+2024-01-13T14:50:50.755 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=73
+2024-01-13T14:50:50.756 INFO 192.168.1.156 <- 16.253412581001882
+2024-01-13T14:50:50.761 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtocoordinatesasync
+2024-01-13T14:50:50.761 INFO 192.168.1.156 -> {'RightAscension': '14.253412581001882', 'Declination': '2', 'ClientID': '1', 'ClientTransactionID': '74'}
+2024-01-13T14:50:50.766 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=75
+2024-01-13T14:50:50.768 INFO 192.168.1.156 <- False
+2024-01-13T14:50:51.267 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=76
+2024-01-13T14:50:51.269 INFO 192.168.1.156 <- False
+2024-01-13T14:50:51.781 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=77
+2024-01-13T14:50:51.782 INFO 192.168.1.156 <- False
+2024-01-13T14:50:52.278 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=78
+2024-01-13T14:50:52.279 INFO 192.168.1.156 <- False
+2024-01-13T14:50:52.778 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=79
+2024-01-13T14:50:52.779 INFO 192.168.1.156 <- False
+2024-01-13T14:50:53.276 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=80
+2024-01-13T14:50:53.278 INFO 192.168.1.156 <- False
+2024-01-13T14:50:53.773 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=81
+2024-01-13T14:50:53.775 INFO 192.168.1.156 <- False
+2024-01-13T14:50:54.270 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=82
+2024-01-13T14:50:54.271 INFO 192.168.1.156 <- False
+2024-01-13T14:50:54.769 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=83
+2024-01-13T14:50:54.771 INFO 192.168.1.156 <- False
+2024-01-13T14:50:55.281 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=84
+2024-01-13T14:50:55.282 INFO 192.168.1.156 <- False
+2024-01-13T14:50:55.780 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=85
+2024-01-13T14:50:55.781 INFO 192.168.1.156 <- False
+2024-01-13T14:50:55.784 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=86
+2024-01-13T14:50:55.785 INFO 192.168.1.156 <- False
+2024-01-13T14:50:55.791 INFO 192.168.1.156 -> GET /api/v1/telescope/0/rightascension?ClientID=1&ClientTransactionID=87
+2024-01-13T14:50:55.792 INFO 192.168.1.156 <- 14.25656188
+2024-01-13T14:50:55.796 INFO 192.168.1.156 -> GET /api/v1/telescope/0/declination?ClientID=1&ClientTransactionID=88
+2024-01-13T14:50:55.797 INFO 192.168.1.156 <- 3.19898923
+2024-01-13T14:50:55.802 INFO 192.168.1.156 -> GET /api/v1/telescope/0/targetrightascension?ClientID=1&ClientTransactionID=89
+2024-01-13T14:50:55.802 ERROR ValueNotSetException: RA not set.
+2024-01-13T14:50:55.805 INFO 192.168.1.156 -> GET /api/v1/telescope/0/targetdeclination?ClientID=1&ClientTransactionID=90
+2024-01-13T14:50:55.805 ERROR ValueNotSetException: Declination not set.
+2024-01-13T14:50:55.816 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=91
+2024-01-13T14:50:55.817 INFO 192.168.1.156 <- False
+2024-01-13T14:50:55.827 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtocoordinatesasync
+2024-01-13T14:50:55.827 INFO 192.168.1.156 -> {'RightAscension': '-1', 'Declination': '0', 'ClientID': '1', 'ClientTransactionID': '92'}
+2024-01-13T14:50:55.827 ERROR InvalidValueException: RA " + rightascension + " not in range.
+2024-01-13T14:50:55.831 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=93
+2024-01-13T14:50:55.832 INFO 192.168.1.156 <- 16.25482644523099
+2024-01-13T14:50:55.835 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtocoordinatesasync
+2024-01-13T14:50:55.835 INFO 192.168.1.156 -> {'RightAscension': '14.25482644523099', 'Declination': '-100', 'ClientID': '1', 'ClientTransactionID': '94'}
+2024-01-13T14:50:55.835 ERROR InvalidValueException: Declination " + declinationstr + " not in range.
+2024-01-13T14:50:55.839 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=95
+2024-01-13T14:50:55.840 INFO 192.168.1.156 <- False
+2024-01-13T14:50:55.844 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtocoordinatesasync
+2024-01-13T14:50:55.844 INFO 192.168.1.156 -> {'RightAscension': '25', 'Declination': '0', 'ClientID': '1', 'ClientTransactionID': '96'}
+2024-01-13T14:50:55.844 ERROR InvalidValueException: RA " + rightascension + " not in range.
+2024-01-13T14:50:55.847 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=97
+2024-01-13T14:50:55.849 INFO 192.168.1.156 <- 16.254831264010406
+2024-01-13T14:50:55.854 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtocoordinatesasync
+2024-01-13T14:50:55.855 INFO 192.168.1.156 -> {'RightAscension': '14.254831264010406', 'Declination': '100', 'ClientID': '1', 'ClientTransactionID': '98'}
+2024-01-13T14:50:55.855 ERROR InvalidValueException: Declination " + declinationstr + " not in range.
+2024-01-13T14:50:55.862 INFO 192.168.1.156 -> GET /api/v1/telescope/0/rightascension?ClientID=1&ClientTransactionID=99
+2024-01-13T14:50:55.864 INFO 192.168.1.156 <- 14.25513627
+2024-01-13T14:50:55.884 INFO 192.168.1.156 -> GET /api/v1/telescope/0/declination?ClientID=1&ClientTransactionID=100
+2024-01-13T14:50:55.886 INFO 192.168.1.156 <- 3.10309383
+2024-01-13T14:50:55.900 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=101
+2024-01-13T14:50:55.902 INFO 192.168.1.156 <- False
+2024-01-13T14:50:55.912 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/synctocoordinates
+2024-01-13T14:50:55.912 INFO 192.168.1.156 -> {'RightAscension': '14.25513627', 'Declination': '3.10309383', 'ClientID': '1', 'ClientTransactionID': '102'}
+2024-01-13T14:50:55.912 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:55.926 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetrightascension
+2024-01-13T14:50:55.926 INFO 192.168.1.156 -> {'TargetRightAscension': '-1', 'ClientID': '1', 'ClientTransactionID': '103'}
+2024-01-13T14:50:55.926 ERROR InvalidValueException: RA " + rightascension + " not in range.
+2024-01-13T14:50:55.950 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetrightascension
+2024-01-13T14:50:55.950 INFO 192.168.1.156 -> {'TargetRightAscension': '25', 'ClientID': '1', 'ClientTransactionID': '104'}
+2024-01-13T14:50:55.950 ERROR InvalidValueException: RA " + rightascension + " not in range.
+2024-01-13T14:50:55.964 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=105
+2024-01-13T14:50:55.966 INFO 192.168.1.156 <- 16.254863751568607
+2024-01-13T14:50:55.971 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetrightascension
+2024-01-13T14:50:55.971 INFO 192.168.1.156 -> {'TargetRightAscension': '12.254863751568607', 'ClientID': '1', 'ClientTransactionID': '106'}
+2024-01-13T14:50:55.975 INFO 192.168.1.156 -> GET /api/v1/telescope/0/targetrightascension?ClientID=1&ClientTransactionID=107
+2024-01-13T14:50:55.975 INFO 192.168.1.156 <- 12.254863751568607
+2024-01-13T14:50:55.978 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetdeclination
+2024-01-13T14:50:55.979 INFO 192.168.1.156 -> {'TargetDeclination': '-91', 'ClientID': '1', 'ClientTransactionID': '108'}
+2024-01-13T14:50:55.979 ERROR InvalidValueException: Declination " + declinationstr + " not in range.
+2024-01-13T14:50:55.987 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetdeclination
+2024-01-13T14:50:55.988 INFO 192.168.1.156 -> {'TargetDeclination': '91', 'ClientID': '1', 'ClientTransactionID': '109'}
+2024-01-13T14:50:55.988 ERROR InvalidValueException: Declination " + declinationstr + " not in range.
+2024-01-13T14:50:55.991 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetdeclination
+2024-01-13T14:50:55.991 INFO 192.168.1.156 -> {'TargetDeclination': '1', 'ClientID': '1', 'ClientTransactionID': '110'}
+2024-01-13T14:50:55.995 INFO 192.168.1.156 -> GET /api/v1/telescope/0/targetdeclination?ClientID=1&ClientTransactionID=111
+2024-01-13T14:50:55.995 INFO 192.168.1.156 <- 1.0
+2024-01-13T14:50:55.999 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=112
+2024-01-13T14:50:56.001 INFO 192.168.1.156 <- False
+2024-01-13T14:50:56.004 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=113
+2024-01-13T14:50:56.005 INFO 192.168.1.156 <- 16.254874823538827
+2024-01-13T14:50:56.009 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetrightascension
+2024-01-13T14:50:56.009 INFO 192.168.1.156 -> {'TargetRightAscension': '13.254874823538827', 'ClientID': '1', 'ClientTransactionID': '114'}
+2024-01-13T14:50:56.012 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetdeclination
+2024-01-13T14:50:56.012 INFO 192.168.1.156 -> {'TargetDeclination': '3', 'ClientID': '1', 'ClientTransactionID': '115'}
+2024-01-13T14:50:56.015 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtotarget
+2024-01-13T14:50:56.015 INFO 192.168.1.156 -> {'ClientID': '1', 'ClientTransactionID': '116'}
+2024-01-13T14:50:56.015 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:50:56.021 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=117
+2024-01-13T14:50:56.023 INFO 192.168.1.156 <- False
+2024-01-13T14:50:56.027 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=118
+2024-01-13T14:50:56.029 INFO 192.168.1.156 <- 16.25488131209231
+2024-01-13T14:50:56.031 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetrightascension
+2024-01-13T14:50:56.032 INFO 192.168.1.156 -> {'TargetRightAscension': '12.254881312092309', 'ClientID': '1', 'ClientTransactionID': '119'}
+2024-01-13T14:50:56.034 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetdeclination
+2024-01-13T14:50:56.034 INFO 192.168.1.156 -> {'TargetDeclination': '4', 'ClientID': '1', 'ClientTransactionID': '120'}
+2024-01-13T14:50:56.037 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtotargetasync
+2024-01-13T14:50:56.037 INFO 192.168.1.156 -> {'ClientID': '1', 'ClientTransactionID': '121'}
+2024-01-13T14:50:56.042 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=122
+2024-01-13T14:50:56.044 INFO 192.168.1.156 <- False
+2024-01-13T14:50:56.549 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=123
+2024-01-13T14:50:56.550 INFO 192.168.1.156 <- False
+2024-01-13T14:50:57.047 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=124
+2024-01-13T14:50:57.049 INFO 192.168.1.156 <- False
+2024-01-13T14:50:57.543 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=125
+2024-01-13T14:50:57.545 INFO 192.168.1.156 <- False
+2024-01-13T14:50:58.050 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=126
+2024-01-13T14:50:58.051 INFO 192.168.1.156 <- False
+2024-01-13T14:50:58.547 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=127
+2024-01-13T14:50:58.548 INFO 192.168.1.156 <- False
+2024-01-13T14:50:59.046 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=128
+2024-01-13T14:50:59.047 INFO 192.168.1.156 <- False
+2024-01-13T14:50:59.545 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=129
+2024-01-13T14:50:59.547 INFO 192.168.1.156 <- False
+2024-01-13T14:51:00.044 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=130
+2024-01-13T14:51:00.045 INFO 192.168.1.156 <- False
+2024-01-13T14:51:00.558 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=131
+2024-01-13T14:51:00.559 INFO 192.168.1.156 <- False
+2024-01-13T14:51:01.054 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=132
+2024-01-13T14:51:01.055 INFO 192.168.1.156 <- False
+2024-01-13T14:51:01.057 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=133
+2024-01-13T14:51:01.059 INFO 192.168.1.156 <- False
+2024-01-13T14:51:01.068 INFO 192.168.1.156 -> GET /api/v1/telescope/0/rightascension?ClientID=1&ClientTransactionID=134
+2024-01-13T14:51:01.070 INFO 192.168.1.156 <- 12.25789501
+2024-01-13T14:51:01.083 INFO 192.168.1.156 -> GET /api/v1/telescope/0/declination?ClientID=1&ClientTransactionID=135
+2024-01-13T14:51:01.085 INFO 192.168.1.156 <- 4.12397904
+2024-01-13T14:51:01.090 INFO 192.168.1.156 -> GET /api/v1/telescope/0/targetrightascension?ClientID=1&ClientTransactionID=136
+2024-01-13T14:51:01.090 INFO 192.168.1.156 <- 12.254881312092309
+2024-01-13T14:51:01.094 INFO 192.168.1.156 -> GET /api/v1/telescope/0/targetdeclination?ClientID=1&ClientTransactionID=137
+2024-01-13T14:51:01.095 INFO 192.168.1.156 <- 4.0
+2024-01-13T14:51:01.098 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=138
+2024-01-13T14:51:01.100 INFO 192.168.1.156 <- False
+2024-01-13T14:51:01.102 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetrightascension
+2024-01-13T14:51:01.102 INFO 192.168.1.156 -> {'TargetRightAscension': '-1', 'ClientID': '1', 'ClientTransactionID': '139'}
+2024-01-13T14:51:01.102 ERROR InvalidValueException: RA " + rightascension + " not in range.
+2024-01-13T14:51:01.106 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=140
+2024-01-13T14:51:01.107 INFO 192.168.1.156 <- 16.256295658193537
+2024-01-13T14:51:01.112 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetdeclination
+2024-01-13T14:51:01.112 INFO 192.168.1.156 -> {'TargetDeclination': '-100', 'ClientID': '1', 'ClientTransactionID': '141'}
+2024-01-13T14:51:01.113 ERROR InvalidValueException: Declination " + declinationstr + " not in range.
+2024-01-13T14:51:01.117 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=142
+2024-01-13T14:51:01.118 INFO 192.168.1.156 <- False
+2024-01-13T14:51:01.121 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetrightascension
+2024-01-13T14:51:01.121 INFO 192.168.1.156 -> {'TargetRightAscension': '25', 'ClientID': '1', 'ClientTransactionID': '143'}
+2024-01-13T14:51:01.121 ERROR InvalidValueException: RA " + rightascension + " not in range.
+2024-01-13T14:51:01.124 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=144
+2024-01-13T14:51:01.126 INFO 192.168.1.156 <- 16.2563009476401
+2024-01-13T14:51:01.143 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetdeclination
+2024-01-13T14:51:01.143 INFO 192.168.1.156 -> {'TargetDeclination': '100', 'ClientID': '1', 'ClientTransactionID': '145'}
+2024-01-13T14:51:01.143 ERROR InvalidValueException: Declination " + declinationstr + " not in range.
+2024-01-13T14:51:01.147 INFO 192.168.1.156 -> GET /api/v1/telescope/0/rightascension?ClientID=1&ClientTransactionID=146
+2024-01-13T14:51:01.149 INFO 192.168.1.156 <- 12.25594161
+2024-01-13T14:51:01.152 INFO 192.168.1.156 -> GET /api/v1/telescope/0/declination?ClientID=1&ClientTransactionID=147
+2024-01-13T14:51:01.153 INFO 192.168.1.156 <- 4.12456357
+2024-01-13T14:51:01.156 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=148
+2024-01-13T14:51:01.157 INFO 192.168.1.156 <- False
+2024-01-13T14:51:01.161 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetrightascension
+2024-01-13T14:51:01.161 INFO 192.168.1.156 -> {'TargetRightAscension': '12.25594161', 'ClientID': '1', 'ClientTransactionID': '149'}
+2024-01-13T14:51:01.164 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetdeclination
+2024-01-13T14:51:01.165 INFO 192.168.1.156 -> {'TargetDeclination': '4.12456357', 'ClientID': '1', 'ClientTransactionID': '150'}
+2024-01-13T14:51:01.167 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/synctotarget
+2024-01-13T14:51:01.168 INFO 192.168.1.156 -> {'ClientID': '1', 'ClientTransactionID': '151'}
+2024-01-13T14:51:01.168 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T14:51:01.182 INFO 192.168.1.156 -> GET /api/v1/telescope/0/cansettracking?ClientID=1&ClientTransactionID=152
+2024-01-13T14:51:01.182 INFO 192.168.1.156 <- False
+2024-01-13T14:51:01.191 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/connected
+2024-01-13T14:51:01.192 INFO 192.168.1.156 -> {'Connected': 'False', 'ClientID': '1', 'ClientTransactionID': '153'}
+2024-01-13T14:51:01.195 INFO 192.168.1.156 -> GET /api/v1/telescope/0/connected?ClientID=1&ClientTransactionID=154
+2024-01-13T14:51:01.196 ERROR An uncaught IndexError exception occurred:
+2024-01-13T14:51:01.197 ERROR list index out of range
+2024-01-13T14:51:01.197 ERROR '  File "falcon/app.py", line 365, in falcon.app.App.__call__\n'
+2024-01-13T14:51:01.197 ERROR '  File "/home/jmhannon/.local/lib/python3.8/site-packages/falcon/hooks.py", line 264, in do_before\n    responder(self, req, resp, **kwargs)\n'
+2024-01-13T14:51:01.197 ERROR '  File "/home/jmhannon/ascomtelescope/telescope.py", line 104, in on_get\n    if (reply[0]== \'0\'):\n'
+2024-01-13T14:56:31.764 INFO Disc rcv alpacadiscovery1 from ('192.168.1.156', 64485)
+2024-01-13T14:56:32.785 INFO 192.168.1.156 <- [1]
+2024-01-13T14:56:32.801 INFO 192.168.1.156 <- {'ServerName': 'Alpaca Sample Rotator ', 'Manufacturer': 'ASCOM Initiative', 'Version': '0.2', 'Location': 'Anywhere on Earth'}
+2024-01-13T14:56:32.807 INFO 192.168.1.156 <- [{'DeviceName': 'Rigel Telescope', 'DeviceType': 'Telescope', 'DeviceNumber': 0, 'UniqueID': 'dacc2515-9570-4e9d-9912-fcb213156c37'}]
+2024-01-13T14:56:56.696 INFO Disc rcv alpacadiscovery1 from ('192.168.1.156', 50605)
+2024-01-13T14:56:56.704 INFO 192.168.1.156 <- [1]
+2024-01-13T14:56:56.712 INFO 192.168.1.156 <- {'ServerName': 'Alpaca Sample Rotator ', 'Manufacturer': 'ASCOM Initiative', 'Version': '0.2', 'Location': 'Anywhere on Earth'}
+2024-01-13T14:56:56.714 INFO 192.168.1.156 <- [{'DeviceName': 'Rigel Telescope', 'DeviceType': 'Telescope', 'DeviceNumber': 0, 'UniqueID': 'dacc2515-9570-4e9d-9912-fcb213156c37'}]
+2024-01-13T14:57:08.620 INFO 192.168.1.156 -> GET /setup
+2024-01-13T15:02:29.879 INFO 192.168.1.156 -> GET /api/v1/telescope/0/interfaceversion?ClientID=1&ClientTransactionID=155
+2024-01-13T15:02:29.879 INFO 192.168.1.156 <- 1
+2024-01-13T15:02:29.885 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/connected
+2024-01-13T15:02:29.885 INFO 192.168.1.156 -> {'Connected': 'True', 'ClientID': '1', 'ClientTransactionID': '156'}
+2024-01-13T15:02:29.888 INFO 192.168.1.156 -> GET /api/v1/telescope/0/connected?ClientID=1&ClientTransactionID=157
+2024-01-13T15:02:29.889 INFO 192.168.1.156 <- True
+2024-01-13T15:02:29.895 INFO 192.168.1.156 -> GET /api/v1/telescope/0/connected?ClientID=1&ClientTransactionID=158
+2024-01-13T15:02:29.896 ERROR An uncaught IndexError exception occurred:
+2024-01-13T15:02:29.897 ERROR list index out of range
+2024-01-13T15:02:29.897 ERROR '  File "falcon/app.py", line 365, in falcon.app.App.__call__\n'
+2024-01-13T15:02:29.897 ERROR '  File "/home/jmhannon/.local/lib/python3.8/site-packages/falcon/hooks.py", line 264, in do_before\n    responder(self, req, resp, **kwargs)\n'
+2024-01-13T15:02:29.897 ERROR '  File "/home/jmhannon/ascomtelescope/telescope.py", line 104, in on_get\n    if (reply[0]== \'0\'):\n'
+2024-01-13T15:02:29.903 INFO 192.168.1.156 -> GET /api/v1/telescope/0/description?ClientID=1&ClientTransactionID=159
+2024-01-13T15:02:29.903 INFO 192.168.1.156 <- Rigel  ASCOM Telescope
+2024-01-13T15:02:29.907 INFO 192.168.1.156 -> GET /api/v1/telescope/0/driverinfo?ClientID=1&ClientTransactionID=160
+2024-01-13T15:02:29.907 INFO 192.168.1.156 <- Cedar Amateur Astronomers Rigel robotic telescope
+2024-01-13T15:02:29.910 INFO 192.168.1.156 -> GET /api/v1/telescope/0/name?ClientID=1&ClientTransactionID=161
+2024-01-13T15:02:29.910 INFO 192.168.1.156 <- Rigel Telescope
+2024-01-13T15:02:29.915 INFO 192.168.1.156 -> GET /api/v1/telescope/0/supportedactions?ClientID=1&ClientTransactionID=162
+2024-01-13T15:02:29.915 INFO 192.168.1.156 <- []
+2024-01-13T15:02:29.923 INFO 192.168.1.156 -> GET /api/v1/telescope/0/canfindhome?ClientID=1&ClientTransactionID=163
+2024-01-13T15:02:29.924 INFO 192.168.1.156 <- True
+2024-01-13T15:02:29.927 INFO 192.168.1.156 -> GET /api/v1/telescope/0/canpark?ClientID=1&ClientTransactionID=164
+2024-01-13T15:02:29.927 INFO 192.168.1.156 <- True
+2024-01-13T15:02:29.931 INFO 192.168.1.156 -> GET /api/v1/telescope/0/canpulseguide?ClientID=1&ClientTransactionID=165
+2024-01-13T15:02:29.931 INFO 192.168.1.156 <- False
+2024-01-13T15:02:29.936 INFO 192.168.1.156 -> GET /api/v1/telescope/0/cansetpark?ClientID=1&ClientTransactionID=166
+2024-01-13T15:02:29.936 INFO 192.168.1.156 <- False
+2024-01-13T15:02:29.940 INFO 192.168.1.156 -> GET /api/v1/telescope/0/alignmentmode?ClientID=1&ClientTransactionID=167
+2024-01-13T15:02:29.940 INFO 192.168.1.156 <- 1
+2024-01-13T15:02:29.945 INFO 192.168.1.156 -> GET /api/v1/telescope/0/cansettracking?ClientID=1&ClientTransactionID=168
+2024-01-13T15:02:29.945 INFO 192.168.1.156 <- False
+2024-01-13T15:02:29.951 INFO 192.168.1.156 -> GET /api/v1/telescope/0/canslew?ClientID=1&ClientTransactionID=169
+2024-01-13T15:02:29.951 INFO 192.168.1.156 <- False
+2024-01-13T15:02:29.955 INFO 192.168.1.156 -> GET /api/v1/telescope/0/canslewasync?ClientID=1&ClientTransactionID=170
+2024-01-13T15:02:29.955 INFO 192.168.1.156 <- True
+2024-01-13T15:02:29.958 INFO 192.168.1.156 -> GET /api/v1/telescope/0/cansync?ClientID=1&ClientTransactionID=171
+2024-01-13T15:02:29.958 INFO 192.168.1.156 <- False
+2024-01-13T15:02:29.962 INFO 192.168.1.156 -> GET /api/v1/telescope/0/canunpark?ClientID=1&ClientTransactionID=172
+2024-01-13T15:02:29.962 INFO 192.168.1.156 <- False
+2024-01-13T15:02:29.968 INFO 192.168.1.156 -> GET /api/v1/telescope/0/utcdate?ClientID=1&ClientTransactionID=173
+2024-01-13T15:02:29.968 INFO 192.168.1.156 <- 2024-01-13T15:02:29.968530Z
+2024-01-13T15:02:29.972 INFO 192.168.1.156 -> GET /api/v1/telescope/0/utcdate?ClientID=1&ClientTransactionID=174
+2024-01-13T15:02:29.972 INFO 192.168.1.156 <- 2024-01-13T15:02:29.972493Z
+2024-01-13T15:02:29.974 INFO 192.168.1.156 -> GET /api/v1/telescope/0/utcdate?ClientID=1&ClientTransactionID=175
+2024-01-13T15:02:29.975 INFO 192.168.1.156 <- 2024-01-13T15:02:29.975074Z
+2024-01-13T15:02:29.979 INFO 192.168.1.156 -> GET /api/v1/telescope/0/targetdeclination?ClientID=1&ClientTransactionID=176
+2024-01-13T15:02:29.979 ERROR ValueNotSetException: Declination not set.
+2024-01-13T15:02:29.982 INFO 192.168.1.156 -> GET /api/v1/telescope/0/targetrightascension?ClientID=1&ClientTransactionID=177
+2024-01-13T15:02:29.982 ERROR ValueNotSetException: RA not set.
+2024-01-13T15:02:29.985 INFO 192.168.1.156 -> GET /api/v1/telescope/0/alignmentmode?ClientID=1&ClientTransactionID=178
+2024-01-13T15:02:29.985 INFO 192.168.1.156 <- 1
+2024-01-13T15:02:29.990 INFO 192.168.1.156 -> GET /api/v1/telescope/0/altitude?ClientID=1&ClientTransactionID=179
+2024-01-13T15:02:29.991 INFO 192.168.1.156 <- 24.9351976
+2024-01-13T15:02:29.996 INFO 192.168.1.156 -> GET /api/v1/telescope/0/aperturearea?ClientID=1&ClientTransactionID=180
+2024-01-13T15:02:29.997 INFO 192.168.1.156 <- 0.107
+2024-01-13T15:02:30.002 INFO 192.168.1.156 -> GET /api/v1/telescope/0/aperturediameter?ClientID=1&ClientTransactionID=181
+2024-01-13T15:02:30.002 INFO 192.168.1.156 <- 0.37
+2024-01-13T15:02:30.005 INFO 192.168.1.156 -> GET /api/v1/telescope/0/azimuth?ClientID=1&ClientTransactionID=182
+2024-01-13T15:02:30.007 INFO 192.168.1.156 <- 251.7410099
+2024-01-13T15:02:30.010 INFO 192.168.1.156 -> GET /api/v1/telescope/0/declination?ClientID=1&ClientTransactionID=183
+2024-01-13T15:02:30.011 INFO 192.168.1.156 <- 4.12424518
+2024-01-13T15:02:30.014 INFO 192.168.1.156 -> GET /api/v1/telescope/0/declinationrate?ClientID=1&ClientTransactionID=184
+2024-01-13T15:02:30.014 INFO 192.168.1.156 <- 0
+2024-01-13T15:02:30.017 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/declinationrate
+2024-01-13T15:02:30.017 INFO 192.168.1.156 -> {'DeclinationRate': '0', 'ClientID': '1', 'ClientTransactionID': '185'}
+2024-01-13T15:02:30.017 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:30.022 INFO 192.168.1.156 -> GET /api/v1/telescope/0/focallength?ClientID=1&ClientTransactionID=186
+2024-01-13T15:02:30.022 INFO 192.168.1.156 <- 5.18
+2024-01-13T15:02:30.029 INFO 192.168.1.156 -> GET /api/v1/telescope/0/rightascension?ClientID=1&ClientTransactionID=187
+2024-01-13T15:02:30.030 INFO 192.168.1.156 <- 12.44718063
+2024-01-13T15:02:30.033 INFO 192.168.1.156 -> GET /api/v1/telescope/0/rightascensionrate?ClientID=1&ClientTransactionID=188
+2024-01-13T15:02:30.033 INFO 192.168.1.156 <- 0
+2024-01-13T15:02:30.035 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/rightascensionrate
+2024-01-13T15:02:30.036 INFO 192.168.1.156 -> {'RightAscensionRate': '0', 'ClientID': '1', 'ClientTransactionID': '189'}
+2024-01-13T15:02:30.036 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:30.039 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siteelevation?ClientID=1&ClientTransactionID=190
+2024-01-13T15:02:30.039 INFO 192.168.1.156 <- 256.0
+2024-01-13T15:02:30.042 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/siteelevation
+2024-01-13T15:02:30.042 INFO 192.168.1.156 -> {'SiteElevation': '-301', 'ClientID': '1', 'ClientTransactionID': '191'}
+2024-01-13T15:02:30.042 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:30.049 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/siteelevation
+2024-01-13T15:02:30.049 INFO 192.168.1.156 -> {'SiteElevation': '10001', 'ClientID': '1', 'ClientTransactionID': '192'}
+2024-01-13T15:02:30.050 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:30.059 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/siteelevation
+2024-01-13T15:02:30.059 INFO 192.168.1.156 -> {'SiteElevation': '256', 'ClientID': '1', 'ClientTransactionID': '193'}
+2024-01-13T15:02:30.059 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:30.089 INFO 192.168.1.156 -> GET /api/v1/telescope/0/sitelatitude?ClientID=1&ClientTransactionID=194
+2024-01-13T15:02:30.089 INFO 192.168.1.156 <- 41.889549
+2024-01-13T15:02:30.119 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/sitelatitude
+2024-01-13T15:02:30.119 INFO 192.168.1.156 -> {'SiteLatitude': '-91', 'ClientID': '1', 'ClientTransactionID': '195'}
+2024-01-13T15:02:30.119 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:30.129 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/sitelatitude
+2024-01-13T15:02:30.129 INFO 192.168.1.156 -> {'SiteLatitude': '91', 'ClientID': '1', 'ClientTransactionID': '196'}
+2024-01-13T15:02:30.129 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:30.133 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/sitelatitude
+2024-01-13T15:02:30.133 INFO 192.168.1.156 -> {'SiteLatitude': '41.889549', 'ClientID': '1', 'ClientTransactionID': '197'}
+2024-01-13T15:02:30.133 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:30.136 INFO 192.168.1.156 -> GET /api/v1/telescope/0/sitelongitude?ClientID=1&ClientTransactionID=198
+2024-01-13T15:02:30.136 INFO 192.168.1.156 <- -91.500431
+2024-01-13T15:02:30.139 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/sitelongitude
+2024-01-13T15:02:30.139 INFO 192.168.1.156 -> {'SiteLongitude': '-181', 'ClientID': '1', 'ClientTransactionID': '199'}
+2024-01-13T15:02:30.139 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:30.142 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/sitelongitude
+2024-01-13T15:02:30.142 INFO 192.168.1.156 -> {'SiteLongitude': '181', 'ClientID': '1', 'ClientTransactionID': '200'}
+2024-01-13T15:02:30.142 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:30.148 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/sitelongitude
+2024-01-13T15:02:30.148 INFO 192.168.1.156 -> {'SiteLongitude': '-91.500431', 'ClientID': '1', 'ClientTransactionID': '201'}
+2024-01-13T15:02:30.148 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:30.151 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=202
+2024-01-13T15:02:30.153 INFO 192.168.1.156 <- False
+2024-01-13T15:02:30.156 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewsettletime?ClientID=1&ClientTransactionID=203
+2024-01-13T15:02:30.156 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:30.159 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewsettletime
+2024-01-13T15:02:30.159 INFO 192.168.1.156 -> {'SlewSettleTime': '-1', 'ClientID': '1', 'ClientTransactionID': '204'}
+2024-01-13T15:02:30.159 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:30.163 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewsettletime
+2024-01-13T15:02:30.163 INFO 192.168.1.156 -> {'SlewSettleTime': '0', 'ClientID': '1', 'ClientTransactionID': '205'}
+2024-01-13T15:02:30.163 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:30.168 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=206
+2024-01-13T15:02:30.169 INFO 192.168.1.156 <- 16.44822594620591
+2024-01-13T15:02:30.174 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=207
+2024-01-13T15:02:30.176 INFO 192.168.1.156 <- False
+2024-01-13T15:02:30.179 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/tracking
+2024-01-13T15:02:30.179 INFO 192.168.1.156 -> {'Tracking': 'True', 'ClientID': '1', 'ClientTransactionID': '208'}
+2024-01-13T15:02:30.179 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:30.183 INFO 192.168.1.156 -> GET /api/v1/telescope/0/utcdate?ClientID=1&ClientTransactionID=209
+2024-01-13T15:02:30.183 INFO 192.168.1.156 <- 2024-01-13T15:02:30.183657Z
+2024-01-13T15:02:30.186 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/utcdate
+2024-01-13T15:02:30.186 INFO 192.168.1.156 -> {'UTCDate': '2024-01-13T16:02:30.1836570Z', 'ClientID': '1', 'ClientTransactionID': '210'}
+2024-01-13T15:02:30.186 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:30.192 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/abortslew
+2024-01-13T15:02:30.192 INFO 192.168.1.156 -> {'ClientID': '1', 'ClientTransactionID': '211'}
+2024-01-13T15:02:30.196 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=212
+2024-01-13T15:02:30.198 INFO 192.168.1.156 <- 16.448233891580728
+2024-01-13T15:02:30.200 INFO 192.168.1.156 -> GET /api/v1/telescope/0/sitelatitude?ClientID=1&ClientTransactionID=213
+2024-01-13T15:02:30.200 INFO 192.168.1.156 <- 41.889549
+2024-01-13T15:02:30.202 INFO 192.168.1.156 -> GET /api/v1/telescope/0/sitelongitude?ClientID=1&ClientTransactionID=214
+2024-01-13T15:02:30.202 INFO 192.168.1.156 <- -91.500431
+2024-01-13T15:02:30.204 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siteelevation?ClientID=1&ClientTransactionID=215
+2024-01-13T15:02:30.205 INFO 192.168.1.156 <- 256.0
+2024-01-13T15:02:30.230 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtocoordinatesasync
+2024-01-13T15:02:30.230 INFO 192.168.1.156 -> {'RightAscension': '19.448233891580728', 'Declination': '55', 'ClientID': '1', 'ClientTransactionID': '216'}
+2024-01-13T15:02:31.738 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=217
+2024-01-13T15:02:31.739 INFO 192.168.1.156 <- False
+2024-01-13T15:02:31.747 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/abortslew
+2024-01-13T15:02:31.747 INFO 192.168.1.156 -> {'ClientID': '1', 'ClientTransactionID': '218'}
+2024-01-13T15:02:33.262 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=219
+2024-01-13T15:02:33.263 INFO 192.168.1.156 <- False
+2024-01-13T15:02:33.267 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/findhome
+2024-01-13T15:02:33.267 INFO 192.168.1.156 -> {'ClientID': '1', 'ClientTransactionID': '220'}
+2024-01-13T15:02:33.271 INFO 192.168.1.156 -> GET /api/v1/telescope/0/athome?ClientID=1&ClientTransactionID=221
+2024-01-13T15:02:33.271 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:33.279 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/pulseguide
+2024-01-13T15:02:33.279 INFO 192.168.1.156 -> {'Direction': '2', 'Duration': '0', 'ClientID': '1', 'ClientTransactionID': '222'}
+2024-01-13T15:02:33.279 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:33.284 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=223
+2024-01-13T15:02:33.286 INFO 192.168.1.156 <- False
+2024-01-13T15:02:33.288 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=224
+2024-01-13T15:02:33.290 INFO 192.168.1.156 <- 16.449095209635104
+2024-01-13T15:02:33.292 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtocoordinates
+2024-01-13T15:02:33.293 INFO 192.168.1.156 -> {'RightAscension': '15.449095209635104', 'Declination': '1', 'ClientID': '1', 'ClientTransactionID': '225'}
+2024-01-13T15:02:33.293 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:33.296 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=226
+2024-01-13T15:02:33.298 INFO 192.168.1.156 <- False
+2024-01-13T15:02:33.301 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=227
+2024-01-13T15:02:33.302 INFO 192.168.1.156 <- 16.44909857156408
+2024-01-13T15:02:33.306 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtocoordinatesasync
+2024-01-13T15:02:33.306 INFO 192.168.1.156 -> {'RightAscension': '14.449098571564079', 'Declination': '2', 'ClientID': '1', 'ClientTransactionID': '228'}
+2024-01-13T15:02:33.311 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=229
+2024-01-13T15:02:33.312 INFO 192.168.1.156 <- False
+2024-01-13T15:02:33.820 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=230
+2024-01-13T15:02:33.822 INFO 192.168.1.156 <- False
+2024-01-13T15:02:34.316 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=231
+2024-01-13T15:02:34.318 INFO 192.168.1.156 <- False
+2024-01-13T15:02:34.814 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=232
+2024-01-13T15:02:34.815 INFO 192.168.1.156 <- False
+2024-01-13T15:02:35.315 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=233
+2024-01-13T15:02:35.317 INFO 192.168.1.156 <- False
+2024-01-13T15:02:35.826 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=234
+2024-01-13T15:02:35.827 INFO 192.168.1.156 <- False
+2024-01-13T15:02:36.324 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=235
+2024-01-13T15:02:36.325 INFO 192.168.1.156 <- False
+2024-01-13T15:02:36.820 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=236
+2024-01-13T15:02:36.822 INFO 192.168.1.156 <- False
+2024-01-13T15:02:37.315 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=237
+2024-01-13T15:02:37.316 INFO 192.168.1.156 <- False
+2024-01-13T15:02:37.814 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=238
+2024-01-13T15:02:37.816 INFO 192.168.1.156 <- False
+2024-01-13T15:02:38.325 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=239
+2024-01-13T15:02:38.327 INFO 192.168.1.156 <- False
+2024-01-13T15:02:38.330 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=240
+2024-01-13T15:02:38.331 INFO 192.168.1.156 <- False
+2024-01-13T15:02:38.341 INFO 192.168.1.156 -> GET /api/v1/telescope/0/rightascension?ClientID=1&ClientTransactionID=241
+2024-01-13T15:02:38.343 INFO 192.168.1.156 <- 14.45227179
+2024-01-13T15:02:38.345 INFO 192.168.1.156 -> GET /api/v1/telescope/0/declination?ClientID=1&ClientTransactionID=242
+2024-01-13T15:02:38.347 INFO 192.168.1.156 <- 3.18853227
+2024-01-13T15:02:38.350 INFO 192.168.1.156 -> GET /api/v1/telescope/0/targetrightascension?ClientID=1&ClientTransactionID=243
+2024-01-13T15:02:38.350 ERROR ValueNotSetException: RA not set.
+2024-01-13T15:02:38.353 INFO 192.168.1.156 -> GET /api/v1/telescope/0/targetdeclination?ClientID=1&ClientTransactionID=244
+2024-01-13T15:02:38.353 ERROR ValueNotSetException: Declination not set.
+2024-01-13T15:02:38.357 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=245
+2024-01-13T15:02:38.358 INFO 192.168.1.156 <- False
+2024-01-13T15:02:38.361 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtocoordinatesasync
+2024-01-13T15:02:38.361 INFO 192.168.1.156 -> {'RightAscension': '-1', 'Declination': '0', 'ClientID': '1', 'ClientTransactionID': '246'}
+2024-01-13T15:02:38.361 ERROR InvalidValueException: RA " + rightascension + " not in range.
+2024-01-13T15:02:38.364 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=247
+2024-01-13T15:02:38.365 INFO 192.168.1.156 <- 16.45050882729656
+2024-01-13T15:02:38.372 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtocoordinatesasync
+2024-01-13T15:02:38.372 INFO 192.168.1.156 -> {'RightAscension': '14.45050882729656', 'Declination': '-100', 'ClientID': '1', 'ClientTransactionID': '248'}
+2024-01-13T15:02:38.372 ERROR InvalidValueException: Declination " + declinationstr + " not in range.
+2024-01-13T15:02:38.375 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=249
+2024-01-13T15:02:38.376 INFO 192.168.1.156 <- False
+2024-01-13T15:02:38.379 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtocoordinatesasync
+2024-01-13T15:02:38.379 INFO 192.168.1.156 -> {'RightAscension': '25', 'Declination': '0', 'ClientID': '1', 'ClientTransactionID': '250'}
+2024-01-13T15:02:38.379 ERROR InvalidValueException: RA " + rightascension + " not in range.
+2024-01-13T15:02:38.385 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=251
+2024-01-13T15:02:38.387 INFO 192.168.1.156 <- 16.450514845182894
+2024-01-13T15:02:38.389 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtocoordinatesasync
+2024-01-13T15:02:38.389 INFO 192.168.1.156 -> {'RightAscension': '14.450514845182894', 'Declination': '100', 'ClientID': '1', 'ClientTransactionID': '252'}
+2024-01-13T15:02:38.390 ERROR InvalidValueException: Declination " + declinationstr + " not in range.
+2024-01-13T15:02:38.393 INFO 192.168.1.156 -> GET /api/v1/telescope/0/rightascension?ClientID=1&ClientTransactionID=253
+2024-01-13T15:02:38.394 INFO 192.168.1.156 <- 14.45102325
+2024-01-13T15:02:38.397 INFO 192.168.1.156 -> GET /api/v1/telescope/0/declination?ClientID=1&ClientTransactionID=254
+2024-01-13T15:02:38.398 INFO 192.168.1.156 <- 3.13484828
+2024-01-13T15:02:38.401 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=255
+2024-01-13T15:02:38.402 INFO 192.168.1.156 <- False
+2024-01-13T15:02:38.404 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/synctocoordinates
+2024-01-13T15:02:38.404 INFO 192.168.1.156 -> {'RightAscension': '14.45102325', 'Declination': '3.13484828', 'ClientID': '1', 'ClientTransactionID': '256'}
+2024-01-13T15:02:38.404 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:38.410 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetrightascension
+2024-01-13T15:02:38.410 INFO 192.168.1.156 -> {'TargetRightAscension': '-1', 'ClientID': '1', 'ClientTransactionID': '257'}
+2024-01-13T15:02:38.410 ERROR InvalidValueException: RA " + rightascension + " not in range.
+2024-01-13T15:02:38.413 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetrightascension
+2024-01-13T15:02:38.413 INFO 192.168.1.156 -> {'TargetRightAscension': '25', 'ClientID': '1', 'ClientTransactionID': '258'}
+2024-01-13T15:02:38.413 ERROR InvalidValueException: RA " + rightascension + " not in range.
+2024-01-13T15:02:38.416 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=259
+2024-01-13T15:02:38.418 INFO 192.168.1.156 <- 16.450523507763407
+2024-01-13T15:02:38.420 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetrightascension
+2024-01-13T15:02:38.420 INFO 192.168.1.156 -> {'TargetRightAscension': '12.450523507763407', 'ClientID': '1', 'ClientTransactionID': '260'}
+2024-01-13T15:02:38.422 INFO 192.168.1.156 -> GET /api/v1/telescope/0/targetrightascension?ClientID=1&ClientTransactionID=261
+2024-01-13T15:02:38.422 INFO 192.168.1.156 <- 12.450523507763407
+2024-01-13T15:02:38.425 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetdeclination
+2024-01-13T15:02:38.425 INFO 192.168.1.156 -> {'TargetDeclination': '-91', 'ClientID': '1', 'ClientTransactionID': '262'}
+2024-01-13T15:02:38.425 ERROR InvalidValueException: Declination " + declinationstr + " not in range.
+2024-01-13T15:02:38.428 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetdeclination
+2024-01-13T15:02:38.428 INFO 192.168.1.156 -> {'TargetDeclination': '91', 'ClientID': '1', 'ClientTransactionID': '263'}
+2024-01-13T15:02:38.428 ERROR InvalidValueException: Declination " + declinationstr + " not in range.
+2024-01-13T15:02:38.432 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetdeclination
+2024-01-13T15:02:38.432 INFO 192.168.1.156 -> {'TargetDeclination': '1', 'ClientID': '1', 'ClientTransactionID': '264'}
+2024-01-13T15:02:38.439 INFO 192.168.1.156 -> GET /api/v1/telescope/0/targetdeclination?ClientID=1&ClientTransactionID=265
+2024-01-13T15:02:38.439 INFO 192.168.1.156 <- 1.0
+2024-01-13T15:02:38.442 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=266
+2024-01-13T15:02:38.443 INFO 192.168.1.156 <- False
+2024-01-13T15:02:38.445 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=267
+2024-01-13T15:02:38.447 INFO 192.168.1.156 <- 16.450531688500902
+2024-01-13T15:02:38.449 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetrightascension
+2024-01-13T15:02:38.449 INFO 192.168.1.156 -> {'TargetRightAscension': '13.450531688500902', 'ClientID': '1', 'ClientTransactionID': '268'}
+2024-01-13T15:02:38.451 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetdeclination
+2024-01-13T15:02:38.451 INFO 192.168.1.156 -> {'TargetDeclination': '3', 'ClientID': '1', 'ClientTransactionID': '269'}
+2024-01-13T15:02:38.453 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtotarget
+2024-01-13T15:02:38.454 INFO 192.168.1.156 -> {'ClientID': '1', 'ClientTransactionID': '270'}
+2024-01-13T15:02:38.454 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:38.457 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=271
+2024-01-13T15:02:38.458 INFO 192.168.1.156 <- False
+2024-01-13T15:02:38.460 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=272
+2024-01-13T15:02:38.462 INFO 192.168.1.156 <- 16.450535778840546
+2024-01-13T15:02:38.464 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetrightascension
+2024-01-13T15:02:38.464 INFO 192.168.1.156 -> {'TargetRightAscension': '12.450535778840546', 'ClientID': '1', 'ClientTransactionID': '273'}
+2024-01-13T15:02:38.468 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetdeclination
+2024-01-13T15:02:38.468 INFO 192.168.1.156 -> {'TargetDeclination': '4', 'ClientID': '1', 'ClientTransactionID': '274'}
+2024-01-13T15:02:38.470 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/slewtotargetasync
+2024-01-13T15:02:38.470 INFO 192.168.1.156 -> {'ClientID': '1', 'ClientTransactionID': '275'}
+2024-01-13T15:02:38.474 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=276
+2024-01-13T15:02:38.475 INFO 192.168.1.156 <- False
+2024-01-13T15:02:38.984 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=277
+2024-01-13T15:02:38.986 INFO 192.168.1.156 <- False
+2024-01-13T15:02:39.480 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=278
+2024-01-13T15:02:39.481 INFO 192.168.1.156 <- False
+2024-01-13T15:02:39.977 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=279
+2024-01-13T15:02:39.978 INFO 192.168.1.156 <- False
+2024-01-13T15:02:40.487 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=280
+2024-01-13T15:02:40.488 INFO 192.168.1.156 <- False
+2024-01-13T15:02:40.982 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=281
+2024-01-13T15:02:40.984 INFO 192.168.1.156 <- False
+2024-01-13T15:02:41.477 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=282
+2024-01-13T15:02:41.496 INFO 192.168.1.156 <- False
+2024-01-13T15:02:41.988 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=283
+2024-01-13T15:02:41.989 INFO 192.168.1.156 <- False
+2024-01-13T15:02:42.488 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=284
+2024-01-13T15:02:42.489 INFO 192.168.1.156 <- False
+2024-01-13T15:02:42.990 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=285
+2024-01-13T15:02:42.991 INFO 192.168.1.156 <- False
+2024-01-13T15:02:43.487 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=286
+2024-01-13T15:02:43.489 INFO 192.168.1.156 <- False
+2024-01-13T15:02:43.491 INFO 192.168.1.156 -> GET /api/v1/telescope/0/slewing?ClientID=1&ClientTransactionID=287
+2024-01-13T15:02:43.493 INFO 192.168.1.156 <- False
+2024-01-13T15:02:43.496 INFO 192.168.1.156 -> GET /api/v1/telescope/0/rightascension?ClientID=1&ClientTransactionID=288
+2024-01-13T15:02:43.497 INFO 192.168.1.156 <- 12.45364654
+2024-01-13T15:02:43.499 INFO 192.168.1.156 -> GET /api/v1/telescope/0/declination?ClientID=1&ClientTransactionID=289
+2024-01-13T15:02:43.501 INFO 192.168.1.156 <- 4.12394834
+2024-01-13T15:02:43.504 INFO 192.168.1.156 -> GET /api/v1/telescope/0/targetrightascension?ClientID=1&ClientTransactionID=290
+2024-01-13T15:02:43.504 INFO 192.168.1.156 <- 12.450535778840546
+2024-01-13T15:02:43.507 INFO 192.168.1.156 -> GET /api/v1/telescope/0/targetdeclination?ClientID=1&ClientTransactionID=291
+2024-01-13T15:02:43.507 INFO 192.168.1.156 <- 4.0
+2024-01-13T15:02:43.509 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=292
+2024-01-13T15:02:43.511 INFO 192.168.1.156 <- False
+2024-01-13T15:02:43.513 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetrightascension
+2024-01-13T15:02:43.513 INFO 192.168.1.156 -> {'TargetRightAscension': '-1', 'ClientID': '1', 'ClientTransactionID': '293'}
+2024-01-13T15:02:43.513 ERROR InvalidValueException: RA " + rightascension + " not in range.
+2024-01-13T15:02:43.516 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=294
+2024-01-13T15:02:43.517 INFO 192.168.1.156 <- 16.45194386051689
+2024-01-13T15:02:43.520 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetdeclination
+2024-01-13T15:02:43.520 INFO 192.168.1.156 -> {'TargetDeclination': '-100', 'ClientID': '1', 'ClientTransactionID': '295'}
+2024-01-13T15:02:43.520 ERROR InvalidValueException: Declination " + declinationstr + " not in range.
+2024-01-13T15:02:43.523 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=296
+2024-01-13T15:02:43.525 INFO 192.168.1.156 <- False
+2024-01-13T15:02:43.528 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetrightascension
+2024-01-13T15:02:43.528 INFO 192.168.1.156 -> {'TargetRightAscension': '25', 'ClientID': '1', 'ClientTransactionID': '297'}
+2024-01-13T15:02:43.528 ERROR InvalidValueException: RA " + rightascension + " not in range.
+2024-01-13T15:02:43.531 INFO 192.168.1.156 -> GET /api/v1/telescope/0/siderealtime?ClientID=1&ClientTransactionID=298
+2024-01-13T15:02:43.532 INFO 192.168.1.156 <- 16.451948197424187
+2024-01-13T15:02:43.534 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetdeclination
+2024-01-13T15:02:43.535 INFO 192.168.1.156 -> {'TargetDeclination': '100', 'ClientID': '1', 'ClientTransactionID': '299'}
+2024-01-13T15:02:43.535 ERROR InvalidValueException: Declination " + declinationstr + " not in range.
+2024-01-13T15:02:43.539 INFO 192.168.1.156 -> GET /api/v1/telescope/0/rightascension?ClientID=1&ClientTransactionID=300
+2024-01-13T15:02:43.540 INFO 192.168.1.156 <- 12.45276591
+2024-01-13T15:02:43.543 INFO 192.168.1.156 -> GET /api/v1/telescope/0/declination?ClientID=1&ClientTransactionID=301
+2024-01-13T15:02:43.544 INFO 192.168.1.156 <- 4.12424208
+2024-01-13T15:02:43.546 INFO 192.168.1.156 -> GET /api/v1/telescope/0/tracking?ClientID=1&ClientTransactionID=302
+2024-01-13T15:02:43.548 INFO 192.168.1.156 <- False
+2024-01-13T15:02:43.550 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetrightascension
+2024-01-13T15:02:43.551 INFO 192.168.1.156 -> {'TargetRightAscension': '12.45276591', 'ClientID': '1', 'ClientTransactionID': '303'}
+2024-01-13T15:02:43.553 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/targetdeclination
+2024-01-13T15:02:43.553 INFO 192.168.1.156 -> {'TargetDeclination': '4.12424208', 'ClientID': '1', 'ClientTransactionID': '304'}
+2024-01-13T15:02:43.555 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/synctotarget
+2024-01-13T15:02:43.555 INFO 192.168.1.156 -> {'ClientID': '1', 'ClientTransactionID': '305'}
+2024-01-13T15:02:43.555 ERROR NotImplementedException: Property or method not implemented.
+2024-01-13T15:02:43.559 INFO 192.168.1.156 -> GET /api/v1/telescope/0/cansettracking?ClientID=1&ClientTransactionID=306
+2024-01-13T15:02:43.559 INFO 192.168.1.156 <- False
+2024-01-13T15:02:43.568 INFO 192.168.1.156 -> PUT /api/v1/telescope/0/connected
+2024-01-13T15:02:43.568 INFO 192.168.1.156 -> {'Connected': 'False', 'ClientID': '1', 'ClientTransactionID': '307'}
+2024-01-13T15:02:43.570 INFO 192.168.1.156 -> GET /api/v1/telescope/0/connected?ClientID=1&ClientTransactionID=308
+2024-01-13T15:02:43.571 ERROR An uncaught IndexError exception occurred:
+2024-01-13T15:02:43.572 ERROR list index out of range
+2024-01-13T15:02:43.572 ERROR '  File "falcon/app.py", line 365, in falcon.app.App.__call__\n'
+2024-01-13T15:02:43.572 ERROR '  File "/home/jmhannon/.local/lib/python3.8/site-packages/falcon/hooks.py", line 264, in do_before\n    responder(self, req, resp, **kwargs)\n'
+2024-01-13T15:02:43.572 ERROR '  File "/home/jmhannon/ascomtelescope/telescope.py", line 104, in on_get\n    if (reply[0]== \'0\'):\n'
